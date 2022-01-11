@@ -13,6 +13,12 @@
 		EBB8406D278D1C6000B1D3A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB8406B278D1C6000B1D3A3 /* Main.storyboard */; };
 		EBB8406F278D1C6100B1D3A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBB8406E278D1C6100B1D3A3 /* Assets.xcassets */; };
 		EBB84072278D1C6100B1D3A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBB84070278D1C6100B1D3A3 /* LaunchScreen.storyboard */; };
+		EBB8407C278D256800B1D3A3 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8407B278D256800B1D3A3 /* Category.swift */; };
+		EBB8407E278D258000B1D3A3 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8407D278D258000B1D3A3 /* CategoryModel.swift */; };
+		EBB84080278D2DFE00B1D3A3 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB8407F278D2DFE00B1D3A3 /* CategoryService.swift */; };
+		EBB84082278D378D00B1D3A3 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB84081278D378D00B1D3A3 /* Meal.swift */; };
+		EBB84084278D37F500B1D3A3 /* MealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB84083278D37F500B1D3A3 /* MealService.swift */; };
+		EBB84086278D383000B1D3A3 /* MealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB84085278D383000B1D3A3 /* MealModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		EBB8406E278D1C6100B1D3A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBB84071278D1C6100B1D3A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBB84073278D1C6100B1D3A3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBB8407B278D256800B1D3A3 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		EBB8407D278D258000B1D3A3 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		EBB8407F278D2DFE00B1D3A3 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
+		EBB84081278D378D00B1D3A3 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		EBB84083278D37F500B1D3A3 /* MealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealService.swift; sourceTree = "<group>"; };
+		EBB84085278D383000B1D3A3 /* MealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +71,12 @@
 				EBB84065278D1C6000B1D3A3 /* AppDelegate.swift */,
 				EBB84067278D1C6000B1D3A3 /* SceneDelegate.swift */,
 				EBB84069278D1C6000B1D3A3 /* ViewController.swift */,
+				EBB8407B278D256800B1D3A3 /* Category.swift */,
+				EBB8407D278D258000B1D3A3 /* CategoryModel.swift */,
+				EBB8407F278D2DFE00B1D3A3 /* CategoryService.swift */,
+				EBB84081278D378D00B1D3A3 /* Meal.swift */,
+				EBB84085278D383000B1D3A3 /* MealModel.swift */,
+				EBB84083278D37F500B1D3A3 /* MealService.swift */,
 				EBB8406B278D1C6000B1D3A3 /* Main.storyboard */,
 				EBB8406E278D1C6100B1D3A3 /* Assets.xcassets */,
 				EBB84070278D1C6100B1D3A3 /* LaunchScreen.storyboard */,
@@ -140,7 +158,13 @@
 			files = (
 				EBB8406A278D1C6000B1D3A3 /* ViewController.swift in Sources */,
 				EBB84066278D1C6000B1D3A3 /* AppDelegate.swift in Sources */,
+				EBB84082278D378D00B1D3A3 /* Meal.swift in Sources */,
 				EBB84068278D1C6000B1D3A3 /* SceneDelegate.swift in Sources */,
+				EBB84084278D37F500B1D3A3 /* MealService.swift in Sources */,
+				EBB84080278D2DFE00B1D3A3 /* CategoryService.swift in Sources */,
+				EBB8407E278D258000B1D3A3 /* CategoryModel.swift in Sources */,
+				EBB84086278D383000B1D3A3 /* MealModel.swift in Sources */,
+				EBB8407C278D256800B1D3A3 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
