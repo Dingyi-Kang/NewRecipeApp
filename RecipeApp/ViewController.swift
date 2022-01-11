@@ -51,8 +51,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let categoreString = self.categories[indexPath.section].strCategory!
-        cell.textLabel?.text = self.mealsDict[categoreString]![indexPath.row].strMeal ?? "nil"
+        
+        if let categoreString = self.categories[indexPath.section].strCategory{
+            if self.mealsDict[categoreString] != nil{
+                cell.textLabel?.text = self.mealsDict[categoreString]![indexPath.row].strMeal ?? "nil"
+            }
+        }
         return cell
     }
     
@@ -91,7 +95,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
 
 extension ViewController: CategoryModelProtocol {
     func catrgoriesRetrieved(_ categories: [Category]) {
-        
+        //I have check all strCategory are not nil. So, it is safe to force unwrapping here
         self.categories = categories.sorted(by: {$0.strCategory! < $1.strCategory!})
         
         for i in 0..<self.categories.count{
@@ -109,6 +113,7 @@ extension ViewController: CategoryModelProtocol {
 
 extension ViewController: MealModelProtocol{
     func mealsRetrieved(_ meals: [Meal], category: Category) {
+        //I have check all strCategory are not nil. So, it is safe to force unwrapping here
         self.mealsDict[category.strCategory!] = meals.sorted(by: {$0.strMeal! < $1.strMeal!})
         //MARK: we can end indicator here after all meals are retrieved
         tableView.reloadData()
