@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5119D6A278D65A400CA9420 /* SingleMeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5119D69278D65A400CA9420 /* SingleMeal.swift */; };
+		A5119D6C278D691100CA9420 /* SingleMealService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5119D6B278D691100CA9420 /* SingleMealService.swift */; };
+		A5119D6E278D6A4F00CA9420 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5119D6D278D6A4F00CA9420 /* DetailViewController.swift */; };
+		A5119D70278D6B9D00CA9420 /* SingleMealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5119D6F278D6B9D00CA9420 /* SingleMealModel.swift */; };
 		EBB84066278D1C6000B1D3A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB84065278D1C6000B1D3A3 /* AppDelegate.swift */; };
 		EBB84068278D1C6000B1D3A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB84067278D1C6000B1D3A3 /* SceneDelegate.swift */; };
 		EBB8406A278D1C6000B1D3A3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB84069278D1C6000B1D3A3 /* ViewController.swift */; };
@@ -22,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A5119D69278D65A400CA9420 /* SingleMeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMeal.swift; sourceTree = "<group>"; };
+		A5119D6B278D691100CA9420 /* SingleMealService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMealService.swift; sourceTree = "<group>"; };
+		A5119D6D278D6A4F00CA9420 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A5119D6F278D6B9D00CA9420 /* SingleMealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleMealModel.swift; sourceTree = "<group>"; };
 		EBB84062278D1C6000B1D3A3 /* RecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBB84065278D1C6000B1D3A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBB84067278D1C6000B1D3A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,12 +79,16 @@
 				EBB84065278D1C6000B1D3A3 /* AppDelegate.swift */,
 				EBB84067278D1C6000B1D3A3 /* SceneDelegate.swift */,
 				EBB84069278D1C6000B1D3A3 /* ViewController.swift */,
+				A5119D6D278D6A4F00CA9420 /* DetailViewController.swift */,
 				EBB8407B278D256800B1D3A3 /* Category.swift */,
 				EBB8407D278D258000B1D3A3 /* CategoryModel.swift */,
 				EBB8407F278D2DFE00B1D3A3 /* CategoryService.swift */,
 				EBB84081278D378D00B1D3A3 /* Meal.swift */,
 				EBB84085278D383000B1D3A3 /* MealModel.swift */,
 				EBB84083278D37F500B1D3A3 /* MealService.swift */,
+				A5119D69278D65A400CA9420 /* SingleMeal.swift */,
+				A5119D6B278D691100CA9420 /* SingleMealService.swift */,
+				A5119D6F278D6B9D00CA9420 /* SingleMealModel.swift */,
 				EBB8406B278D1C6000B1D3A3 /* Main.storyboard */,
 				EBB8406E278D1C6100B1D3A3 /* Assets.xcassets */,
 				EBB84070278D1C6100B1D3A3 /* LaunchScreen.storyboard */,
@@ -157,11 +169,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBB8406A278D1C6000B1D3A3 /* ViewController.swift in Sources */,
+				A5119D70278D6B9D00CA9420 /* SingleMealModel.swift in Sources */,
 				EBB84066278D1C6000B1D3A3 /* AppDelegate.swift in Sources */,
 				EBB84082278D378D00B1D3A3 /* Meal.swift in Sources */,
+				A5119D6E278D6A4F00CA9420 /* DetailViewController.swift in Sources */,
 				EBB84068278D1C6000B1D3A3 /* SceneDelegate.swift in Sources */,
 				EBB84084278D37F500B1D3A3 /* MealService.swift in Sources */,
 				EBB84080278D2DFE00B1D3A3 /* CategoryService.swift in Sources */,
+				A5119D6C278D691100CA9420 /* SingleMealService.swift in Sources */,
+				A5119D6A278D65A400CA9420 /* SingleMeal.swift in Sources */,
 				EBB8407E278D258000B1D3A3 /* CategoryModel.swift in Sources */,
 				EBB84086278D383000B1D3A3 /* MealModel.swift in Sources */,
 				EBB8407C278D256800B1D3A3 /* Category.swift in Sources */,

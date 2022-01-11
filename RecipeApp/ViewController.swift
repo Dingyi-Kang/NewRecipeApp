@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController{
-
+    
     var caregoryModel = CategoryModel()
     var categories = [Category]()
     var mealModel = MealModel()
@@ -21,9 +21,10 @@ class ViewController: UIViewController{
         caregoryModel.delegate = self
         mealModel.delegate = self
         caregoryModel.getCategories()
+        //MARK: we can begin indicator here
     }
-
-
+    
+    
 }
 
 
@@ -35,14 +36,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //MARK: 
+        //MARK:
         if let categoreString = self.categories[section].strCategory{
-        
-        if self.mealsDict[categoreString] != nil{
-            return self.mealsDict[categoreString]!.count
-        }else{
-            return 0
-        }
+            
+            if self.mealsDict[categoreString] != nil{
+                return self.mealsDict[categoreString]!.count
+            }else{
+                return 0
+            }
         } else{
             return 0
         }
@@ -64,6 +65,27 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         return view
     }
     
+    //to make the selected row is deselected when navigating back
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let indexPath = tableView.indexPathForSelectedRow
+        guard indexPath != nil else{return}
+        
+        if let categoryString = self.categories[indexPath!.section].strCategory{
+            
+            if self.mealsDict[categoryString] != nil{
+             
+                let detailVC = segue.destination as! DetailViewController
+                
+                detailVC.mealId = self.mealsDict[categoryString]![indexPath!.row].idMeal
+                
+            }
+        }
+    }
+    
 }
 
 
@@ -75,9 +97,11 @@ extension ViewController: CategoryModelProtocol {
         for i in 0..<self.categories.count{
             let category = self.categories[i]
             mealModel.getMeals(category: category)
+            
         }
         
         tableView.reloadData()
+        
     }
     
 }
@@ -86,8 +110,9 @@ extension ViewController: CategoryModelProtocol {
 extension ViewController: MealModelProtocol{
     func mealsRetrieved(_ meals: [Meal], category: Category) {
         self.mealsDict[category.strCategory!] = meals.sorted(by: {$0.strMeal! < $1.strMeal!})
+        //MARK: we can end indicator here after all meals are retrieved
         tableView.reloadData()
     }
-
+    
     
 }
